@@ -1,0 +1,203 @@
+html, body { margin: 0 }
+
+.card {
+    font-family: Garamond, serif;
+    font-size: 24pt;
+    text-align: center;
+    color: #232323;
+    line-height: 118%;
+    padding: 0;
+    margin: 0;
+}
+
+.none {
+    display: none !important;
+}
+
+#text {
+    visibility: hidden;
+    display: none;
+}
+
+#target {
+    margin: 1em auto;
+    border-top: 1px solid #232323;
+    border-bottom: 1px solid #232323;
+}
+
+.track-line {
+    border-top: 2px solid #c00;
+    ;
+    margin-top: -1em;
+    height: 1px;
+    width: 0px;
+    transition: width 150ms ease-in-out;
+}
+
+.spritzed,
+.back {
+    padding: 1em;
+    position: relative;
+    font-size: 1em;
+    color: #434343;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spritzed::before,
+.spritzed::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    height: 0.3em;
+    background-color: #232323;
+    width: 2px;
+    top: 0;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 300ms;
+    opacity: 1;
+    border-radius: 10%;
+}
+
+.spritzed::before {
+    animation-name: fadeInOpacityTop;
+
+}
+
+.spritzed::after {
+    animation-name: fadeInOpacityBottom;
+    top: auto;
+    bottom: 0;
+}
+
+.spritzed>div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.highlight {
+    color: #c00;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.back {
+    margin: 0.45em 0em;
+}
+
+.hr {
+    border-top: 1px solid #e2e2e2;
+}
+
+
+
+/* Header */
+.small {
+    font-size: 0.7em;
+    line-height: 100%;
+}
+
+.verysmall {
+    font-size: 0.5em;
+    line-height: 100%;
+}
+
+.timestamp {
+    font-size: 0.3em;
+    color: grey;
+}
+
+footer {
+    font-family: Avenir, Arial, arial, sans-serif;
+    background: #cde8fa;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-top: 2em;
+    display:none;
+}
+
+.first-line {
+    background: #E6F2F9;
+    color: grey;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.3em;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s .2s ease-in-out forwards;
+}
+
+.second-line {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    color: grey;
+    font-size: 0.5em;
+    line-height: 2em;
+    opacity: 0;
+    animation: fadeIn 1s .4s ease-in-out forwards;
+}
+
+.gray {
+    color: gray;
+}
+
+
+/* Animations */
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOpacityTop {
+    0% {
+        opacity: .9;
+        transform: translateY(0%);
+        height: 1em;
+        background-color: red;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        height: 0.3em;
+        background-color: #232323;
+    }
+}
+
+@keyframes fadeInOpacityBottom {
+    0% {
+        opacity: .9;
+        transform: translateY(0%);
+        height: 1em;
+        background-color: red;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        height: 0.3em;
+        background-color: #232323;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .back {
+        margin: 0.45em 1em;
+    }
+}

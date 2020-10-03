@@ -1,0 +1,11 @@
+{
+  "name": "anki-spritz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 8080" 
+  },
+  "author": "mr.sarac@gmail.com",
+  "license": "ISC"
+}
