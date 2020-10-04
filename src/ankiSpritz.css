@@ -45,6 +45,11 @@ html, body { margin: 0 }
     justify-content: center;
 }
 
+.nightMode .spritzed,
+.nightMode .back{
+    color: #ebebeb;
+}
+
 .spritzed::before,
 .spritzed::after {
     content: "";
