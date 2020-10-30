@@ -158,6 +158,16 @@ footer {
     color: gray;
 }
 
+/* FRONT */
+
+/* BACK */
+
+/* AUDIO */
+
+/* REPEAT */
+.repeat {
+    /* outline: 1px solid tomato */
+}
 
 /* Animations */
 @keyframes fadeIn{
